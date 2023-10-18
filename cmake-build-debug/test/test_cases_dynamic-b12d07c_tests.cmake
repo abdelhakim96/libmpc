@@ -1,0 +1,7 @@
+add_test( [==[Dynamic - Discrete LTI SISO example]==] /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic [==[Dynamic - Discrete LTI SISO example]==]  )
+set_tests_properties( [==[Dynamic - Discrete LTI SISO example]==] PROPERTIES WORKING_DIRECTORY /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test)
+add_test( [==[Dynamic - Vanderpol example]==] /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic [==[Dynamic - Vanderpol example]==]  )
+set_tests_properties( [==[Dynamic - Vanderpol example]==] PROPERTIES WORKING_DIRECTORY /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test)
+add_test( [==[Dynamic - Linear quadrotor example]==] /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic [==[Dynamic - Linear quadrotor example]==]  )
+set_tests_properties( [==[Dynamic - Linear quadrotor example]==] PROPERTIES WORKING_DIRECTORY /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test)
+set( test_cases_dynamic_TESTS [==[Dynamic - Discrete LTI SISO example]==] [==[Dynamic - Vanderpol example]==] [==[Dynamic - Linear quadrotor example]==])

@@ -1,0 +1,17 @@
+# ninja log v5
+2	2195	1697643403553459167	test/CMakeFiles/test_lib_static.dir/test_profiler.cpp.o	b5f37690febbd283
+2	731	1697643402089475674	test/CMakeFiles/test_lib_dynamic.dir/test_main.cpp.o	c853ef108f2fc0f0
+0	46	1697670557980163168	build.ninja	73d69b62598a95b9
+3	714	1697643412509358167	test/CMakeFiles/test_lib_static.dir/test_main.cpp.o	8f48ccaa903bc638
+2	1869	1697643403229462820	test/CMakeFiles/test_lib_dynamic.dir/test_logger.cpp.o	42c2c45a171188a3
+731	4941	1697643406293428271	test/CMakeFiles/test_lib_static.dir/test_utils.cpp.o	d4d1be1a966c5f67
+3	1924	1697643413721344496	test/CMakeFiles/test_lib_static.dir/test_logger.cpp.o	edfd8c0fee20ea7a
+1	4381	1697643405733434586	test/CMakeFiles/test_lib_dynamic.dir/test_utils.cpp.o	4f567de224d1a58c
+0	371	1697643369893838423	test/CMakeFiles/test_cases_dynamic.dir/test_main.cpp.o	1cfa0f43120aa159
+2	2191	1697643403549459212	test/CMakeFiles/test_lib_dynamic.dir/test_profiler.cpp.o	604fca4055336f2d
+1	4513	1697670564792047526	test/CMakeFiles/test_cases_dynamic.dir/NLMPC/test_vanderpol.cpp.o	ec41bc0e5d64d80d
+1	4573	1697670564852046524	test/CMakeFiles/test_cases_dynamic.dir/NLMPC/test_discrete_lti_siso.cpp.o	8f2ce5df38e1579e
+1	4857	1697670565136041797	test/CMakeFiles/test_cases_dynamic.dir/LMPC/test_quadrotor.cpp.o	beaff4bfeaca36da
+4858	5400	1697670565684032700	/home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic	73f6958a180fc0dd
+4858	5400	1697670565684032700	test/test_cases_dynamic-b12d07c_tests.cmake	73f6958a180fc0dd
+4858	5400	1697670565684032700	/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test/test_cases_dynamic-b12d07c_tests.cmake	73f6958a180fc0dd

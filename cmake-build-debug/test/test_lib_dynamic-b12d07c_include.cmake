@@ -1,0 +1,5 @@
+if(EXISTS "/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test/test_lib_dynamic-b12d07c_tests.cmake")
+  include("/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test/test_lib_dynamic-b12d07c_tests.cmake")
+else()
+  add_test(test_lib_dynamic_NOT_BUILT-b12d07c test_lib_dynamic_NOT_BUILT-b12d07c)
+endif()

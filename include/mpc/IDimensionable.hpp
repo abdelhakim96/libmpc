@@ -95,7 +95,7 @@ namespace mpc
         using ObjFunHandle = std::function<double(
             const mat<sizer.ph + 1, sizer.nx> &,
             const mat<sizer.ph + 1, sizer.ny> &,
-            const mat<sizer.ph + 1, sizer.nu> &,
+            const mat<sizer.ph -+ 1, sizer.nu> &,
             const double &)>;
 
         /**
