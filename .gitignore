@@ -3,3 +3,4 @@ bin/
 lib/
 web/
 docs/source/_build
+cmake-build-debug/

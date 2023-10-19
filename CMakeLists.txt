@@ -97,6 +97,8 @@ install(FILES "${PROJECT_BINARY_DIR}/mpc++ConfigVersion.cmake"
 
 install(DIRECTORY "${PROJECT_SOURCE_DIR}/include/" DESTINATION "${MPC++_INSTALL_INCLUDE_DIR}")
 
+add_subdirectory(examples)
+
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     ## Adding test subdirectory just in case of debug
     enable_testing()

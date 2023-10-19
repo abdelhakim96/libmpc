@@ -83,6 +83,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples/cmake_install.cmake")
   include("/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test/cmake_install.cmake")
 
 endif()

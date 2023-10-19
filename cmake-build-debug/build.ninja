@@ -122,6 +122,124 @@ build install/strip: phony CMakeFiles/install/strip.util
 # /home/hakim/Desktop/Phd/projects/libmpc/CMakeLists.txt
 # =============================================================================
 
+# =============================================================================
+# Object build statements for EXECUTABLE target quad
+
+
+#############################################
+# Order-only phony target for quad
+
+build cmake_object_order_depends_target_quad: phony || examples/CMakeFiles/quad.dir
+
+build examples/CMakeFiles/quad.dir/quad.cpp.o: CXX_COMPILER__quad_Debug /home/hakim/Desktop/Phd/projects/libmpc/examples/quad.cpp || cmake_object_order_depends_target_quad
+  DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DSHOW_STACKTRACE=0
+  DEP_FILE = examples/CMakeFiles/quad.dir/quad.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++2a
+  INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include
+  OBJECT_DIR = examples/CMakeFiles/quad.dir
+  OBJECT_FILE_DIR = examples/CMakeFiles/quad.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target quad
+
+
+#############################################
+# Link the executable examples/quad
+
+build examples/quad: CXX_EXECUTABLE_LINKER__quad_Debug examples/CMakeFiles/quad.dir/quad.cpp.o
+  FLAGS = -g
+  LINK_FLAGS = -rdynamic
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  -lnlopt  -lm  -losqp
+  LINK_PATH = -L/usr/local/lib
+  OBJECT_DIR = examples/CMakeFiles/quad.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = examples/quad
+  TARGET_PDB = quad.dbg
+
+
+#############################################
+# Utility command for test
+
+build examples/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples && /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build examples/test: phony examples/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build examples/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples && /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build examples/edit_cache: phony examples/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build examples/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples && /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/hakim/Desktop/Phd/projects/libmpc -B/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build examples/rebuild_cache: phony examples/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build examples/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build examples/CMakeFiles/install.util: CUSTOM_COMMAND examples/all
+  COMMAND = cd /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples && /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build examples/install: phony examples/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build examples/CMakeFiles/install/local.util: CUSTOM_COMMAND examples/all
+  COMMAND = cd /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples && /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build examples/install/local: phony examples/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build examples/CMakeFiles/install/strip.util: CUSTOM_COMMAND examples/all
+  COMMAND = cd /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples && /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build examples/install/strip: phony examples/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/hakim/Desktop/Phd/projects/libmpc/CMakeLists.txt
+# =============================================================================
+
 
 #############################################
 # Utility command for Experimental
@@ -318,8 +436,6 @@ build test/CMakeFiles/test_lib_dynamic.dir/NLMPC/test_constraints.cpp.o: CXX_COM
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_dynamic.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_dynamic.dir/NLMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_dynamic.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynamic.pdb
 
 build test/CMakeFiles/test_lib_dynamic.dir/NLMPC/test_objective.cpp.o: CXX_COMPILER__test_lib_dynamic_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/NLMPC/test_objective.cpp || cmake_object_order_depends_target_test_lib_dynamic
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DMPC_DYNAMIC -DSHOW_STACKTRACE=0 -Ddebug
@@ -328,8 +444,6 @@ build test/CMakeFiles/test_lib_dynamic.dir/NLMPC/test_objective.cpp.o: CXX_COMPI
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_dynamic.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_dynamic.dir/NLMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_dynamic.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynamic.pdb
 
 build test/CMakeFiles/test_lib_dynamic.dir/NLMPC/test_common.cpp.o: CXX_COMPILER__test_lib_dynamic_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/NLMPC/test_common.cpp || cmake_object_order_depends_target_test_lib_dynamic
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DMPC_DYNAMIC -DSHOW_STACKTRACE=0 -Ddebug
@@ -338,8 +452,6 @@ build test/CMakeFiles/test_lib_dynamic.dir/NLMPC/test_common.cpp.o: CXX_COMPILER
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_dynamic.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_dynamic.dir/NLMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_dynamic.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynamic.pdb
 
 build test/CMakeFiles/test_lib_dynamic.dir/LMPC/test_lmpc.cpp.o: CXX_COMPILER__test_lib_dynamic_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/LMPC/test_lmpc.cpp || cmake_object_order_depends_target_test_lib_dynamic
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DMPC_DYNAMIC -DSHOW_STACKTRACE=0 -Ddebug
@@ -348,8 +460,6 @@ build test/CMakeFiles/test_lib_dynamic.dir/LMPC/test_lmpc.cpp.o: CXX_COMPILER__t
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_dynamic.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_dynamic.dir/LMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_dynamic.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynamic.pdb
 
 build test/CMakeFiles/test_lib_dynamic.dir/LMPC/test_mutiple_instances.cpp.o: CXX_COMPILER__test_lib_dynamic_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/LMPC/test_mutiple_instances.cpp || cmake_object_order_depends_target_test_lib_dynamic
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DMPC_DYNAMIC -DSHOW_STACKTRACE=0 -Ddebug
@@ -358,8 +468,6 @@ build test/CMakeFiles/test_lib_dynamic.dir/LMPC/test_mutiple_instances.cpp.o: CX
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_dynamic.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_dynamic.dir/LMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_dynamic.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynamic.pdb
 
 build test/CMakeFiles/test_lib_dynamic.dir/test_utils.cpp.o: CXX_COMPILER__test_lib_dynamic_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/test_utils.cpp || cmake_object_order_depends_target_test_lib_dynamic
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DMPC_DYNAMIC -DSHOW_STACKTRACE=0 -Ddebug
@@ -368,8 +476,6 @@ build test/CMakeFiles/test_lib_dynamic.dir/test_utils.cpp.o: CXX_COMPILER__test_
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_dynamic.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_dynamic.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_dynamic.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynamic.pdb
 
 build test/CMakeFiles/test_lib_dynamic.dir/test_profiler.cpp.o: CXX_COMPILER__test_lib_dynamic_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/test_profiler.cpp || cmake_object_order_depends_target_test_lib_dynamic
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DMPC_DYNAMIC -DSHOW_STACKTRACE=0 -Ddebug
@@ -378,8 +484,6 @@ build test/CMakeFiles/test_lib_dynamic.dir/test_profiler.cpp.o: CXX_COMPILER__te
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_dynamic.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_dynamic.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_dynamic.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynamic.pdb
 
 build test/CMakeFiles/test_lib_dynamic.dir/test_logger.cpp.o: CXX_COMPILER__test_lib_dynamic_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/test_logger.cpp || cmake_object_order_depends_target_test_lib_dynamic
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DMPC_DYNAMIC -DSHOW_STACKTRACE=0 -Ddebug
@@ -388,8 +492,6 @@ build test/CMakeFiles/test_lib_dynamic.dir/test_logger.cpp.o: CXX_COMPILER__test
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_dynamic.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_dynamic.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_dynamic.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynamic.pdb
 
 build test/CMakeFiles/test_lib_dynamic.dir/test_main.cpp.o: CXX_COMPILER__test_lib_dynamic_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/test_main.cpp || cmake_object_order_depends_target_test_lib_dynamic
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DMPC_DYNAMIC -DSHOW_STACKTRACE=0 -Ddebug
@@ -398,8 +500,6 @@ build test/CMakeFiles/test_lib_dynamic.dir/test_main.cpp.o: CXX_COMPILER__test_l
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_dynamic.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_dynamic.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_dynamic.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynamic.pdb
 
 
 # =============================================================================
@@ -418,9 +518,8 @@ build /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynamic test/test_lib
   POST_BUILD = cd /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test && /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/bin/cmake -D TEST_TARGET=test_lib_dynamic -D TEST_EXECUTABLE=/home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynamic -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=test_lib_dynamic_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test/test_lib_dynamic-b12d07c_tests.cmake -P /usr/local/lib/cmake/Catch2/CatchAddTests.cmake
   PRE_LINK = :
   RESTAT = 1
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_dynamic.dir/
   TARGET_FILE = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynamic
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynamic.pdb
+  TARGET_PDB = test_lib_dynamic.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target test_lib_static
@@ -438,8 +537,6 @@ build test/CMakeFiles/test_lib_static.dir/NLMPC/test_constraints.cpp.o: CXX_COMP
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_static.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_static.dir/NLMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_static.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static.pdb
 
 build test/CMakeFiles/test_lib_static.dir/NLMPC/test_objective.cpp.o: CXX_COMPILER__test_lib_static_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/NLMPC/test_objective.cpp || cmake_object_order_depends_target_test_lib_static
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DSHOW_STACKTRACE=0 -Ddebug
@@ -448,8 +545,6 @@ build test/CMakeFiles/test_lib_static.dir/NLMPC/test_objective.cpp.o: CXX_COMPIL
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_static.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_static.dir/NLMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_static.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static.pdb
 
 build test/CMakeFiles/test_lib_static.dir/NLMPC/test_common.cpp.o: CXX_COMPILER__test_lib_static_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/NLMPC/test_common.cpp || cmake_object_order_depends_target_test_lib_static
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DSHOW_STACKTRACE=0 -Ddebug
@@ -458,8 +553,6 @@ build test/CMakeFiles/test_lib_static.dir/NLMPC/test_common.cpp.o: CXX_COMPILER_
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_static.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_static.dir/NLMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_static.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static.pdb
 
 build test/CMakeFiles/test_lib_static.dir/LMPC/test_lmpc.cpp.o: CXX_COMPILER__test_lib_static_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/LMPC/test_lmpc.cpp || cmake_object_order_depends_target_test_lib_static
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DSHOW_STACKTRACE=0 -Ddebug
@@ -468,8 +561,6 @@ build test/CMakeFiles/test_lib_static.dir/LMPC/test_lmpc.cpp.o: CXX_COMPILER__te
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_static.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_static.dir/LMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_static.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static.pdb
 
 build test/CMakeFiles/test_lib_static.dir/LMPC/test_mutiple_instances.cpp.o: CXX_COMPILER__test_lib_static_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/LMPC/test_mutiple_instances.cpp || cmake_object_order_depends_target_test_lib_static
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DSHOW_STACKTRACE=0 -Ddebug
@@ -478,8 +569,6 @@ build test/CMakeFiles/test_lib_static.dir/LMPC/test_mutiple_instances.cpp.o: CXX
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_static.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_static.dir/LMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_static.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static.pdb
 
 build test/CMakeFiles/test_lib_static.dir/test_utils.cpp.o: CXX_COMPILER__test_lib_static_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/test_utils.cpp || cmake_object_order_depends_target_test_lib_static
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DSHOW_STACKTRACE=0 -Ddebug
@@ -488,8 +577,6 @@ build test/CMakeFiles/test_lib_static.dir/test_utils.cpp.o: CXX_COMPILER__test_l
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_static.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_static.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_static.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static.pdb
 
 build test/CMakeFiles/test_lib_static.dir/test_profiler.cpp.o: CXX_COMPILER__test_lib_static_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/test_profiler.cpp || cmake_object_order_depends_target_test_lib_static
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DSHOW_STACKTRACE=0 -Ddebug
@@ -498,8 +585,6 @@ build test/CMakeFiles/test_lib_static.dir/test_profiler.cpp.o: CXX_COMPILER__tes
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_static.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_static.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_static.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static.pdb
 
 build test/CMakeFiles/test_lib_static.dir/test_logger.cpp.o: CXX_COMPILER__test_lib_static_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/test_logger.cpp || cmake_object_order_depends_target_test_lib_static
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DSHOW_STACKTRACE=0 -Ddebug
@@ -508,8 +593,6 @@ build test/CMakeFiles/test_lib_static.dir/test_logger.cpp.o: CXX_COMPILER__test_
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_static.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_static.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_static.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static.pdb
 
 build test/CMakeFiles/test_lib_static.dir/test_main.cpp.o: CXX_COMPILER__test_lib_static_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/test_main.cpp || cmake_object_order_depends_target_test_lib_static
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DSHOW_STACKTRACE=0 -Ddebug
@@ -518,8 +601,6 @@ build test/CMakeFiles/test_lib_static.dir/test_main.cpp.o: CXX_COMPILER__test_li
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_lib_static.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_lib_static.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_static.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static.pdb
 
 
 # =============================================================================
@@ -538,9 +619,8 @@ build /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static test/test_lib_
   POST_BUILD = cd /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test && /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/bin/cmake -D TEST_TARGET=test_lib_static -D TEST_EXECUTABLE=/home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=test_lib_static_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test/test_lib_static-b12d07c_tests.cmake -P /usr/local/lib/cmake/Catch2/CatchAddTests.cmake
   PRE_LINK = :
   RESTAT = 1
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_lib_static.dir/
   TARGET_FILE = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static.pdb
+  TARGET_PDB = test_lib_static.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target test_cases_dynamic
@@ -558,8 +638,6 @@ build test/CMakeFiles/test_cases_dynamic.dir/NLMPC/test_discrete_lti_siso.cpp.o:
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_cases_dynamic.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_cases_dynamic.dir/NLMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_cases_dynamic.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic.pdb
 
 build test/CMakeFiles/test_cases_dynamic.dir/NLMPC/test_vanderpol.cpp.o: CXX_COMPILER__test_cases_dynamic_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/NLMPC/test_vanderpol.cpp || cmake_object_order_depends_target_test_cases_dynamic
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DMPC_DYNAMIC -DSHOW_STACKTRACE=0 -Ddebug
@@ -568,8 +646,6 @@ build test/CMakeFiles/test_cases_dynamic.dir/NLMPC/test_vanderpol.cpp.o: CXX_COM
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_cases_dynamic.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_cases_dynamic.dir/NLMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_cases_dynamic.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic.pdb
 
 build test/CMakeFiles/test_cases_dynamic.dir/LMPC/test_quadrotor.cpp.o: CXX_COMPILER__test_cases_dynamic_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/LMPC/test_quadrotor.cpp || cmake_object_order_depends_target_test_cases_dynamic
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DMPC_DYNAMIC -DSHOW_STACKTRACE=0 -Ddebug
@@ -578,8 +654,6 @@ build test/CMakeFiles/test_cases_dynamic.dir/LMPC/test_quadrotor.cpp.o: CXX_COMP
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_cases_dynamic.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_cases_dynamic.dir/LMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_cases_dynamic.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic.pdb
 
 build test/CMakeFiles/test_cases_dynamic.dir/test_main.cpp.o: CXX_COMPILER__test_cases_dynamic_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/test_main.cpp || cmake_object_order_depends_target_test_cases_dynamic
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DMPC_DYNAMIC -DSHOW_STACKTRACE=0 -Ddebug
@@ -588,8 +662,6 @@ build test/CMakeFiles/test_cases_dynamic.dir/test_main.cpp.o: CXX_COMPILER__test
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_cases_dynamic.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_cases_dynamic.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_cases_dynamic.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic.pdb
 
 
 # =============================================================================
@@ -608,9 +680,8 @@ build /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic test/test_c
   POST_BUILD = cd /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test && /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/bin/cmake -D TEST_TARGET=test_cases_dynamic -D TEST_EXECUTABLE=/home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=test_cases_dynamic_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test/test_cases_dynamic-b12d07c_tests.cmake -P /usr/local/lib/cmake/Catch2/CatchAddTests.cmake
   PRE_LINK = :
   RESTAT = 1
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_cases_dynamic.dir/
   TARGET_FILE = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic.pdb
+  TARGET_PDB = test_cases_dynamic.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target test_cases_static
@@ -628,8 +699,6 @@ build test/CMakeFiles/test_cases_static.dir/NLMPC/test_discrete_lti_siso.cpp.o: 
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_cases_static.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_cases_static.dir/NLMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_cases_static.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_static.pdb
 
 build test/CMakeFiles/test_cases_static.dir/NLMPC/test_vanderpol.cpp.o: CXX_COMPILER__test_cases_static_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/NLMPC/test_vanderpol.cpp || cmake_object_order_depends_target_test_cases_static
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DSHOW_STACKTRACE=0 -Ddebug
@@ -638,8 +707,6 @@ build test/CMakeFiles/test_cases_static.dir/NLMPC/test_vanderpol.cpp.o: CXX_COMP
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_cases_static.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_cases_static.dir/NLMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_cases_static.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_static.pdb
 
 build test/CMakeFiles/test_cases_static.dir/LMPC/test_quadrotor.cpp.o: CXX_COMPILER__test_cases_static_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/LMPC/test_quadrotor.cpp || cmake_object_order_depends_target_test_cases_static
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DSHOW_STACKTRACE=0 -Ddebug
@@ -648,8 +715,6 @@ build test/CMakeFiles/test_cases_static.dir/LMPC/test_quadrotor.cpp.o: CXX_COMPI
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_cases_static.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_cases_static.dir/LMPC
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_cases_static.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_static.pdb
 
 build test/CMakeFiles/test_cases_static.dir/test_main.cpp.o: CXX_COMPILER__test_cases_static_Coverage /home/hakim/Desktop/Phd/projects/libmpc/test/test_main.cpp || cmake_object_order_depends_target_test_cases_static
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DSHOW_STACKTRACE=0 -Ddebug
@@ -658,8 +723,6 @@ build test/CMakeFiles/test_cases_static.dir/test_main.cpp.o: CXX_COMPILER__test_
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include -I/home/hakim/Desktop/Phd/projects/libmpc/test/include
   OBJECT_DIR = test/CMakeFiles/test_cases_static.dir
   OBJECT_FILE_DIR = test/CMakeFiles/test_cases_static.dir
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_cases_static.dir/
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_static.pdb
 
 
 # =============================================================================
@@ -678,9 +741,8 @@ build /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_static test/test_ca
   POST_BUILD = cd /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test && /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/bin/cmake -D TEST_TARGET=test_cases_static -D TEST_EXECUTABLE=/home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_static -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=test_cases_static_TESTS -D TEST_REPORTER= -D TEST_OUTPUT_DIR= -D TEST_OUTPUT_PREFIX= -D TEST_OUTPUT_SUFFIX= -D TEST_DL_PATHS= -D CTEST_FILE=/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test/test_cases_static-b12d07c_tests.cmake -P /usr/local/lib/cmake/Catch2/CatchAddTests.cmake
   PRE_LINK = :
   RESTAT = 1
-  TARGET_COMPILE_PDB = test/CMakeFiles/test_cases_static.dir/
   TARGET_FILE = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_static
-  TARGET_PDB = /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_static.pdb
+  TARGET_PDB = test_cases_static.dbg
 
 
 #############################################
@@ -1060,6 +1122,8 @@ build NightlyTest: phony test/NightlyTest
 
 build NightlyUpdate: phony test/NightlyUpdate
 
+build quad: phony examples/quad
+
 build test_cases_dynamic: phony /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic
 
 build test_cases_static: phony /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_static
@@ -1080,7 +1144,14 @@ build test_lib_static_coverage: phony test/test_lib_static_coverage
 #############################################
 # Folder: /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug
 
-build all: phony test/all
+build all: phony examples/all test/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples
+
+build examples/all: phony examples/quad
 
 # =============================================================================
 
@@ -1101,14 +1172,14 @@ build test/all: phony /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_dynam
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompiler.cmake.in /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCompilerIdDetection.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeDetermineCXXCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeDetermineCompileFeatures.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeDetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeDetermineCompilerABI.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeDetermineCompilerId.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeDetermineSystem.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeFindBinUtils.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakePackageConfigHelpers.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeParseImplicitIncludeInfo.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeParseImplicitLinkInfo.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeParseLibraryArchitecture.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystem.cmake.in /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeTestCXXCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeTestCompilerCommon.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CTest.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CTestTargets.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CTestUseLaunchers.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/ADSP-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/ARMCC-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/ARMClang-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/AppleClang-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Borland-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Clang-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Cray-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GHS-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-FindBinUtils.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/IAR-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Intel-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/MSVC-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/NVHPC-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/PGI-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/PathScale-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/SCO-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/TI-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Tasking-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Watcom-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/DartConfiguration.tcl.in /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindOpenMP.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Internal/FeatureTesting.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-Determine-CXX.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-CXX.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/UnixPaths.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/WriteBasicConfigVersionFile.cmake /home/hakim/Desktop/Phd/projects/libmpc/CMakeLists.txt /home/hakim/Desktop/Phd/projects/libmpc/cmake/modules/CodeCoverage.cmake /home/hakim/Desktop/Phd/projects/libmpc/cmake/mpc++Config.cmake.in /home/hakim/Desktop/Phd/projects/libmpc/test/CMakeLists.txt /usr/lib/cmake/eigen3/Eigen3Config.cmake /usr/lib/cmake/eigen3/Eigen3ConfigVersion.cmake /usr/lib/cmake/eigen3/Eigen3Targets.cmake /usr/local/lib/cmake/Catch2/Catch.cmake /usr/local/lib/cmake/Catch2/Catch2Config.cmake /usr/local/lib/cmake/Catch2/Catch2ConfigVersion.cmake /usr/local/lib/cmake/Catch2/Catch2Targets-noconfig.cmake /usr/local/lib/cmake/Catch2/Catch2Targets.cmake /usr/local/lib/cmake/nlopt/NLoptConfig.cmake /usr/local/lib/cmake/nlopt/NLoptConfigVersion.cmake /usr/local/lib/cmake/nlopt/NLoptLibraryDepends-release.cmake /usr/local/lib/cmake/nlopt/NLoptLibraryDepends.cmake /usr/local/lib/cmake/osqp/osqp-config.cmake /usr/local/lib/cmake/osqp/osqp-targets-noconfig.cmake /usr/local/lib/cmake/osqp/osqp-targets.cmake CMakeCache.txt CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakePackageConfigHelpers.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeParseImplicitLinkInfo.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CTest.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CTestTargets.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CTestUseLaunchers.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/DartConfiguration.tcl.in /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindOpenMP.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-CXX.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/UnixPaths.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/WriteBasicConfigVersionFile.cmake /home/hakim/Desktop/Phd/projects/libmpc/CMakeLists.txt /home/hakim/Desktop/Phd/projects/libmpc/cmake/modules/CodeCoverage.cmake /home/hakim/Desktop/Phd/projects/libmpc/cmake/mpc++Config.cmake.in /home/hakim/Desktop/Phd/projects/libmpc/examples/CMakeLists.txt /home/hakim/Desktop/Phd/projects/libmpc/test/CMakeLists.txt /usr/lib/cmake/eigen3/Eigen3Config.cmake /usr/lib/cmake/eigen3/Eigen3ConfigVersion.cmake /usr/lib/cmake/eigen3/Eigen3Targets.cmake /usr/local/lib/cmake/Catch2/Catch.cmake /usr/local/lib/cmake/Catch2/Catch2Config.cmake /usr/local/lib/cmake/Catch2/Catch2ConfigVersion.cmake /usr/local/lib/cmake/Catch2/Catch2Targets-noconfig.cmake /usr/local/lib/cmake/Catch2/Catch2Targets.cmake /usr/local/lib/cmake/nlopt/NLoptConfig.cmake /usr/local/lib/cmake/nlopt/NLoptConfigVersion.cmake /usr/local/lib/cmake/nlopt/NLoptLibraryDepends-release.cmake /usr/local/lib/cmake/nlopt/NLoptLibraryDepends.cmake /usr/local/lib/cmake/osqp/osqp-config.cmake /usr/local/lib/cmake/osqp/osqp-targets-noconfig.cmake /usr/local/lib/cmake/osqp/osqp-targets.cmake CMakeCache.txt CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompiler.cmake.in /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCompilerIdDetection.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeDetermineCXXCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeDetermineCompileFeatures.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeDetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeDetermineCompilerABI.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeDetermineCompilerId.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeDetermineSystem.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeFindBinUtils.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakePackageConfigHelpers.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeParseImplicitIncludeInfo.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeParseImplicitLinkInfo.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeParseLibraryArchitecture.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystem.cmake.in /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeTestCXXCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeTestCompilerCommon.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CTest.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CTestTargets.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CTestUseLaunchers.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/ADSP-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/ARMCC-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/ARMClang-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/AppleClang-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Borland-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Clang-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Cray-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GHS-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-FindBinUtils.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/IAR-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Intel-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/MSVC-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/NVHPC-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/PGI-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/PathScale-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/SCO-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/TI-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Tasking-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/Watcom-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/DartConfiguration.tcl.in /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindOpenMP.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Internal/FeatureTesting.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-Determine-CXX.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-CXX.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/UnixPaths.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/WriteBasicConfigVersionFile.cmake /home/hakim/Desktop/Phd/projects/libmpc/CMakeLists.txt /home/hakim/Desktop/Phd/projects/libmpc/cmake/modules/CodeCoverage.cmake /home/hakim/Desktop/Phd/projects/libmpc/cmake/mpc++Config.cmake.in /home/hakim/Desktop/Phd/projects/libmpc/test/CMakeLists.txt /usr/lib/cmake/eigen3/Eigen3Config.cmake /usr/lib/cmake/eigen3/Eigen3ConfigVersion.cmake /usr/lib/cmake/eigen3/Eigen3Targets.cmake /usr/local/lib/cmake/Catch2/Catch.cmake /usr/local/lib/cmake/Catch2/Catch2Config.cmake /usr/local/lib/cmake/Catch2/Catch2ConfigVersion.cmake /usr/local/lib/cmake/Catch2/Catch2Targets-noconfig.cmake /usr/local/lib/cmake/Catch2/Catch2Targets.cmake /usr/local/lib/cmake/nlopt/NLoptConfig.cmake /usr/local/lib/cmake/nlopt/NLoptConfigVersion.cmake /usr/local/lib/cmake/nlopt/NLoptLibraryDepends-release.cmake /usr/local/lib/cmake/nlopt/NLoptLibraryDepends.cmake /usr/local/lib/cmake/osqp/osqp-config.cmake /usr/local/lib/cmake/osqp/osqp-targets-noconfig.cmake /usr/local/lib/cmake/osqp/osqp-targets.cmake CMakeCache.txt CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake: phony
+build /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakePackageConfigHelpers.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeParseImplicitLinkInfo.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CTest.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CTestTargets.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/CTestUseLaunchers.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/DartConfiguration.tcl.in /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindOpenMP.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageHandleStandardArgs.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/FindPackageMessage.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-CXX.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/UnixPaths.cmake /home/hakim/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/231.9161.40/bin/cmake/linux/x64/share/cmake-3.25/Modules/WriteBasicConfigVersionFile.cmake /home/hakim/Desktop/Phd/projects/libmpc/CMakeLists.txt /home/hakim/Desktop/Phd/projects/libmpc/cmake/modules/CodeCoverage.cmake /home/hakim/Desktop/Phd/projects/libmpc/cmake/mpc++Config.cmake.in /home/hakim/Desktop/Phd/projects/libmpc/examples/CMakeLists.txt /home/hakim/Desktop/Phd/projects/libmpc/test/CMakeLists.txt /usr/lib/cmake/eigen3/Eigen3Config.cmake /usr/lib/cmake/eigen3/Eigen3ConfigVersion.cmake /usr/lib/cmake/eigen3/Eigen3Targets.cmake /usr/local/lib/cmake/Catch2/Catch.cmake /usr/local/lib/cmake/Catch2/Catch2Config.cmake /usr/local/lib/cmake/Catch2/Catch2ConfigVersion.cmake /usr/local/lib/cmake/Catch2/Catch2Targets-noconfig.cmake /usr/local/lib/cmake/Catch2/Catch2Targets.cmake /usr/local/lib/cmake/nlopt/NLoptConfig.cmake /usr/local/lib/cmake/nlopt/NLoptConfigVersion.cmake /usr/local/lib/cmake/nlopt/NLoptLibraryDepends-release.cmake /usr/local/lib/cmake/nlopt/NLoptLibraryDepends.cmake /usr/local/lib/cmake/osqp/osqp-config.cmake /usr/local/lib/cmake/osqp/osqp-targets-noconfig.cmake /usr/local/lib/cmake/osqp/osqp-targets.cmake CMakeCache.txt CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake: phony
 
 
 #############################################

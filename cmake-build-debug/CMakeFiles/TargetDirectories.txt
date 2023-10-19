@@ -5,6 +5,14 @@
 /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/CMakeFiles/install.dir
 /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/CMakeFiles/install/local.dir
 /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/CMakeFiles/install/strip.dir
+/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples/CMakeFiles/quad.dir
+/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples/CMakeFiles/test.dir
+/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples/CMakeFiles/edit_cache.dir
+/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples/CMakeFiles/rebuild_cache.dir
+/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples/CMakeFiles/list_install_components.dir
+/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples/CMakeFiles/install.dir
+/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples/CMakeFiles/install/local.dir
+/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples/CMakeFiles/install/strip.dir
 /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test/CMakeFiles/Experimental.dir
 /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test/CMakeFiles/Nightly.dir
 /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test/CMakeFiles/Continuous.dir
