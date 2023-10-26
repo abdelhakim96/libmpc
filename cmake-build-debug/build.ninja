@@ -123,40 +123,40 @@ build install/strip: phony CMakeFiles/install/strip.util
 # =============================================================================
 
 # =============================================================================
-# Object build statements for EXECUTABLE target quad
+# Object build statements for EXECUTABLE target vanderpol_example
 
 
 #############################################
-# Order-only phony target for quad
+# Order-only phony target for vanderpol_example
 
-build cmake_object_order_depends_target_quad: phony || examples/CMakeFiles/quad.dir
+build cmake_object_order_depends_target_vanderpol_example: phony || examples/CMakeFiles/vanderpol_example.dir
 
-build examples/CMakeFiles/quad.dir/quad.cpp.o: CXX_COMPILER__quad_Debug /home/hakim/Desktop/Phd/projects/libmpc/examples/quad.cpp || cmake_object_order_depends_target_quad
+build examples/CMakeFiles/vanderpol_example.dir/vanderpol_example.cpp.o: CXX_COMPILER__vanderpol_example_Debug /home/hakim/Desktop/Phd/projects/libmpc/examples/vanderpol_example.cpp || cmake_object_order_depends_target_vanderpol_example
   DEFINES = -DEIGEN_STACK_ALLOCATION_LIMIT=0 -DSHOW_STACKTRACE=0
-  DEP_FILE = examples/CMakeFiles/quad.dir/quad.cpp.o.d
+  DEP_FILE = examples/CMakeFiles/vanderpol_example.dir/vanderpol_example.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++2a
   INCLUDES = -I/usr/include/eigen3 -I/home/hakim/Desktop/Phd/projects/libmpc/include
-  OBJECT_DIR = examples/CMakeFiles/quad.dir
-  OBJECT_FILE_DIR = examples/CMakeFiles/quad.dir
+  OBJECT_DIR = examples/CMakeFiles/vanderpol_example.dir
+  OBJECT_FILE_DIR = examples/CMakeFiles/vanderpol_example.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target quad
+# Link build statements for EXECUTABLE target vanderpol_example
 
 
 #############################################
-# Link the executable examples/quad
+# Link the executable examples/vanderpol_example
 
-build examples/quad: CXX_EXECUTABLE_LINKER__quad_Debug examples/CMakeFiles/quad.dir/quad.cpp.o
+build examples/vanderpol_example: CXX_EXECUTABLE_LINKER__vanderpol_example_Debug examples/CMakeFiles/vanderpol_example.dir/vanderpol_example.cpp.o
   FLAGS = -g
   LINK_FLAGS = -rdynamic
   LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  -lnlopt  -lm  -losqp
   LINK_PATH = -L/usr/local/lib
-  OBJECT_DIR = examples/CMakeFiles/quad.dir
+  OBJECT_DIR = examples/CMakeFiles/vanderpol_example.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = examples/quad
-  TARGET_PDB = quad.dbg
+  TARGET_FILE = examples/vanderpol_example
+  TARGET_PDB = vanderpol_example.dbg
 
 
 #############################################
@@ -1122,8 +1122,6 @@ build NightlyTest: phony test/NightlyTest
 
 build NightlyUpdate: phony test/NightlyUpdate
 
-build quad: phony examples/quad
-
 build test_cases_dynamic: phony /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_dynamic
 
 build test_cases_static: phony /home/hakim/Desktop/Phd/projects/libmpc/bin/test_cases_static
@@ -1135,6 +1133,8 @@ build test_lib_dynamic_coverage: phony test/test_lib_dynamic_coverage
 build test_lib_static: phony /home/hakim/Desktop/Phd/projects/libmpc/bin/test_lib_static
 
 build test_lib_static_coverage: phony test/test_lib_static_coverage
+
+build vanderpol_example: phony examples/vanderpol_example
 
 # =============================================================================
 # Folder targets.
@@ -1151,7 +1151,7 @@ build all: phony examples/all test/all
 #############################################
 # Folder: /home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/examples
 
-build examples/all: phony examples/quad
+build examples/all: phony examples/vanderpol_example
 
 # =============================================================================
 

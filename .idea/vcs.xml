@@ -2,9 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/deps/Catch2" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/deps/nlopt" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/deps/osqp" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/deps/osqp/lin_sys/direct/qdldl/qdldl_sources" vcs="Git" />
   </component>
 </project>

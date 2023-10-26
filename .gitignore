@@ -1,4 +1,5 @@
 build/
+hakim_mpc/build/
 bin/
 lib/
 web/
