@@ -6,7 +6,7 @@
 2	11294	1697723139710299690	test/CMakeFiles/test_lib_static.dir/NLMPC/test_constraints.cpp.o	362317ef7d268be6
 1	5583	1698329957497402863	test/CMakeFiles/test_cases_dynamic.dir/LMPC/test_quadrotor.cpp.o	bd34dde648fe97fa
 0	5211	1698329957125435308	test/CMakeFiles/test_cases_dynamic.dir/NLMPC/test_discrete_lti_siso.cpp.o	c2964a7114ff0e1
-0	46	1698330273005682211	build.ninja	73d69b62598a95b9
+0	51	1698331004791273089	build.ninja	73d69b62598a95b9
 0	5235	1698329957149433215	test/CMakeFiles/test_cases_dynamic.dir/NLMPC/test_vanderpol.cpp.o	897f5cdacb61dfef
 3	754	1697723129186481002	test/CMakeFiles/test_lib_static.dir/test_main.cpp.o	1affab6aa6bff90a
 5583	6141	1698329958065353353	/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test/test_cases_dynamic-b12d07c_tests.cmake	5aaf50f2dbf7a5a1
@@ -29,4 +29,3 @@
 0	687	1698329952609834824	test/CMakeFiles/test_cases_dynamic.dir/test_main.cpp.o	58f35b2f41934a6f
 10665	11592	1697723178105650979	/home/hakim/Desktop/Phd/projects/libmpc/cmake-build-debug/test/test_lib_dynamic-b12d07c_tests.cmake	7144b0a36a969bca
 3	2198	1697723168709807919	test/CMakeFiles/test_lib_dynamic.dir/test_profiler.cpp.o	9352b65dab036c2
-0	51	1698330273005682211	build.ninja	73d69b62598a95b9
